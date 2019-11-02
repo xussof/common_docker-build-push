@@ -1,0 +1,8 @@
+- name: Build an image and push it to a private repo
+  docker_image:
+    build:
+      path: "{{ item.value.path }}"
+    name: "{{ item.value.repository }}/{{ item.value.name }}"
+    tag: "{{ item.value.tag|default('latest') }}"
+    push: "{{ item.value.push|lower }}"
+    source: "{{ item.value.source }}"

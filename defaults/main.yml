@@ -1,0 +1,16 @@
+#Example on how to call this role
+#docker_img_dict:
+#  example1:
+#    #https://docs.ansible.com/ansible/latest/modules/docker_image_module.html
+#    #Local path where the dockerfile is placed
+#    path:
+#    #Url to registry. name: registry.ansible.com/chouseknecht/sinatra
+#    repository:
+#    #name for this image
+#    name:
+#    #yes, no
+#    push:
+#    #Default: latest. Example v1
+#    tag:
+#    #build, load, pull, local
+#    source:
