@@ -1,7 +1,7 @@
 ---
-#- src: https://github.com/xussof/software_docker
-#  scm: git
-#  version: master
-#  name: software_docker
+- src: https://github.com/xussof/software_docker
+  scm: git
+  version: master
+  name: software_docker
 
 #Necesita pip install docker
