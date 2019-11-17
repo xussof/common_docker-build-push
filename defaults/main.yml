@@ -8,7 +8,7 @@
 #    repository:
 #    #name for this image
 #    name:
-#    #yes, no
+#    #Push image to registr? yes, no
 #    push:
 #    #Default: latest. Example v1
 #    tag:

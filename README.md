@@ -1,22 +1,38 @@
-software_ansible
+common_docker-build-push
+
 =========
 
-A brief description of the role goes here.
+This role will build and push a docker image to the selected registry.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+All dependencies will appear on requirements.yml file
 
 Role Variables
 --------------
+#Example on how to call this role
+#docker_img_dict:
+#  example1:
+#    #https://docs.ansible.com/ansible/latest/modules/docker_image_module.html
+#    #Local path where the dockerfile is placed
+#    path:
+#    #Url to registry. name: registry.ansible.com/chouseknecht/sinatra
+#    repository:
+#    #name for this image
+#    name:
+#    #Push image to registr? yes, no
+#    push:
+#    #Default: latest. Example v1
+#    tag:
+#    #build, load, pull, local
+#    source:
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+All dependencies will appear on requirements.yml file
 
 Example Playbook
 ----------------
@@ -25,7 +41,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: xussof.common_docker-build-push }
 
 License
 -------
@@ -34,6 +50,4 @@ BSD
 
 Author Information
 ------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-software_ansible
+Made by @xussof
