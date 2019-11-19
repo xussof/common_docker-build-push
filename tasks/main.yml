@@ -5,4 +5,8 @@
     name: "{{ item.value.repository }}/{{ item.value.name }}"
     tag: "{{ item.value.tag|default('latest') }}"
     push: "{{ item.value.push|lower }}"
+    force_tag: yes
+    force_source: yes
+#    force_absent: yes
+#    force: yes
     source: "{{ item.value.source }}"
