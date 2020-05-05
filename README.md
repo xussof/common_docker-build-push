@@ -28,6 +28,8 @@ Role Variables
 #    #build, load, pull, local
 #    source:
 
+Work to do:
+Need to work on role to log in to scaleway for example.
 
 Dependencies
 ------------
