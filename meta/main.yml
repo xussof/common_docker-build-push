@@ -1,7 +1,7 @@
 galaxy_info:
-  author: xussof
+  author: Sergi
   description: your description
-  company: your company (optional)
+  company: coya
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -16,7 +16,7 @@ galaxy_info:
   # - CC-BY
   license: license (GPLv2, CC-BY, etc)
 
-  min_ansible_version: 1.2
+  min_ansible_version: 2.9.0
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:
@@ -52,13 +52,15 @@ galaxy_info:
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
 
-dependencies: []
-#  - src: git@github.com:xussof/software_docker
-#    scm: git
-#    version: master
-#    name: xussof.software_docker
+dependencies:
+  - src: git@github.com:xussof/software_docker
+    scm: git
+    version: master
+    tags: [ software, docker_install ]
+    name: software_docker
 
-#  - src: git@github.com:xussof/software_pip-docker
-#    scm: git
-#    version: master
-#    name: xussof.software_pip-docker
+  - src: git@github.com:xussof/software_pip-docker
+    scm: git
+    version: master
+    tags: [ software ]
+    name: software_pip-docker

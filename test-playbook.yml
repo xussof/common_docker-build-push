@@ -1,0 +1,29 @@
+#ansible-playbook test-playbook.yml --extra-vars "ansible_become_pass=sudo_pass"
+#To run without installing software dependencies
+#ansible-playbook test-playbook.yml --extra-vars "ansible_become_pass=sudo_pass" --skip-tags "software"
+- hosts: localhost
+
+  pre_tasks:
+     - raw:  ansible-galaxy role install -r requirements.yml
+
+  vars:
+    docker_img_dict:
+      sergi_ansible:
+        #https://docs.ansible.com/ansible/latest/modules/docker_image_module.html
+        #Local path where the dockerfile is placed
+        path: /data/project/repos/path/gitops-docker/test-app
+        #Url to registry. name: registry.ansible.com/chouseknecht/sinatra
+        repository: project/test-app
+        #Name for tis image
+        name: test-app
+        #yes, no
+        push: yes
+        #Default: latest. Example v1
+        tag: latest
+        #build, load, pull, local
+        source: build
+
+  tasks:
+    - name: Including role to test
+      include_role:
+        name: '../common_docker-build-push'
